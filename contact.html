@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+    <head>
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+        <title> Website Using Tailwind CSS</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://cdn.tailwindcss.com"></script> 
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+        <style>
+            body.light-dark {
+        background-color: black;
+        color: white;
+        transition: 0.5s;
+    }
+    
+    .light-switch-span {
+        padding: 0;
+    }
+                    </style>
+    </head>
+
+    <body class="light-mode bg-white text-black light-dark:bg-black light-dark:text-white scroll-smooth">
+
+        <nav class="p-6 flex items-center sticky top-0 z-50 bg-[#a2649a] m-0 p-0">
+            <div class="mx-auto relative px-5 max-w-screen-xl w-full h-full flex items-center justify-end">
+                <!--<img src="images/logo.png" class="max-w-xs">-->
+            <span class="font-mono text-black absolute left-1/2 top-1/2 text-xl font-semibold -translate-y-1/2 -translate-x-1/2">Kitty Rescue</span>
+
+            <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+                <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+              </span>
+            </div>
+
+            <ul class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-[#a2649a] w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+                <li class="mx-4 my-6 md:my-0">
+                  <a href="index.html" class="text-xl hover:text-blue-500 duration-500">Home</a>
+                </li>
+                <li class="mx-4 my-6 md:my-0">
+                  <a href="about.html" class="text-xl hover:text-blue-500 duration-500">About</a>
+                </li>
+                <li class="mx-4 my-6 md:my-0">
+                  <a href="adopt.html" class="text-xl hover:text-blue-500 duration-500">Adopt</a>
+                </li>
+                <li class="mx-4 my-6 md:my-0">
+                  <a href="contact.html" class="text-xl hover:text-blue-500 duration-500">Contact</a>
+                </li>
+                <li class="mx-4 my-6 md:my-0">
+                  <a href="location.html" class="text-xl hover:text-blue-500 duration-500">Locations</a>
+                </li>
+              </ul>
+
+              <!--Dark Mode Button-->
+              <span class="light-switch-span">
+                <img class="light-switch light-mode" src="images/moon.webp" onclick="lightMode()">
+              </span>
+              
+            </nav>
+
+        <div class="text-center">
+
+            <img class="" src="images/sticker2.webp" height="150" width="150">
+            <h1 class="text-2xl font-bold text-center">Follow us on all our socials!</h1>
+        </div>
+    <div class="flex justify-center items-center">
+        <ul>
+            <li><img src="images/insta.webp" alt="insta"><p>Instagram</p></li>
+            <li><img src="images/tiktok.webp" alt="tiktok"><p>Tik Tok</p></li>
+            <li><img src="images/facebook.webp" alt="facebook"><p>Facebook</p></li>
+            <li><img src="images/youtube.webp" alt="youtube"><p>Youtube</p></li>
+        </ul>
+
+        <img class="absolute right-0 bottom-0" src="images/sticker4.webp" height="150" width="150">
+    </div>  
+
+    <script src="./script.js"></script>
+    </body>
+</html>

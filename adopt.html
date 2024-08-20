@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+    <head>
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+        <title> Website Using Tailwind CSS</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://cdn.tailwindcss.com">
+        </script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        
+
+    <style>
+        body.light-dark {
+            background-color: black;
+            color: white;
+            transition: 0.5s;
+        }
+        
+        .light-switch-span {
+            padding: 0;
+        }
+
+    </style>
+        
+    </head>
+
+
+
+    <body class="light-mode bg-white text-black light-dark:bg-black light-dark:text-white scroll-smooth">
+
+        <nav class="p-6 flex items-center sticky top-0 z-50 bg-[#a2649a]">
+            <div class="mx-auto relative px-5 max-w-screen-xl w-full h-full flex items-center justify-end">
+    
+            <span class="font-mono text-black absolute left-1/2 top-1/2 text-xl font-semibold -translate-y-1/2 -translate-x-1/2">Kitty Rescue</span>
+
+            <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+                <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+              </span>
+            </div>
+
+            <ul class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-[#a2649a] w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+                <li class="mx-4 my-6 md:my-0">
+                  <a href="index.html" class="text-xl hover:text-blue-500 duration-500">Home</a>
+                </li>
+                <li class="mx-4 my-6 md:my-0">
+                  <a href="about.html" class="text-xl hover:text-blue-500 duration-500">About</a>
+                </li>
+                <li class="mx-4 my-6 md:my-0">
+                  <a href="adopt.html" class="text-xl hover:text-blue-500 duration-500">Adopt</a>
+                </li>
+                <li class="mx-4 my-6 md:my-0">
+                  <a href="contact.html" class="text-xl hover:text-blue-500 duration-500">Contact</a>
+                </li>
+                <li class="mx-4 my-6 md:my-0">
+                  <a href="location.html" class="text-xl hover:text-blue-500 duration-500">Locations</a>
+                </li>
+              </ul>
+
+              <!--Dark Mode Button-->
+          <span class="light-switch-span">
+            <img class="light-switch light-mode" src="images/moon.webp" onclick="lightMode()">
+            <script src="./script.js"></script>
+          </span>
+
+            </nav>
+
+
+
+
+
+        <!--Search Button-->
+        <input type="text" id="searchInput" placeholder="Search a Cat"> 
+        <button onclick="searchPage()">Search</button> 
+        <div id="searchResults"></div> 
+
+
+
+
+
+        
+       
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 rounded-lg shadow">
+
+            <!--Cat #1-->
+            
+        <div class="inline-block">
+            <a href="#lightbox">
+                <img src="images/cat2.webp" loading="lazy" class = "rounded-t-lg w-full h-32 sm:h-48 object-cover">
+            </a>
+
+            <div id="lightbox" class="hidden target:block fixed inset-0 p-10 bg-black/75 overflow-auto">
+                <a href="" class="bg-white px-6 py-6 text-black absolute right-0 bottom-0">X</a>
+                <img src="images/cat2.webp">
+            </div>
+
+            <h1 class="text-xl font-bold text-center h-14 bg-[#c9a5ac]" >Whiskers</h1>
+            <div class="rounded-b-lg shadow-md text-center bg-[#c9a5ac] inline-block whitespace-normal overflow-auto ">Meet Whiskers! He is a 2 year old grey tabby cat. He loves playing with his mouse toy!
+                <p>Share this cat on your socials!</p>
+                <img src="images/socials.webp"></div>
+            </div>
+
+
+        <!--Cat #2-->
+
+        <div class="">
+            <a href="#lightbox1">
+                <img src="images/cat3.webp" loading="lazy" class = "rounded-t-lg w-full h-32 sm:h-48 object-cover">
+            </a>
+
+            <div id="lightbox1" class="hidden target:block fixed inset-0 p-10 bg-black/75 overflow-auto">
+                <a href="" class="bg-white px-6 py-6 text-black absolute right-0 bottom-0">X</a>
+                <img src="images/cat3.webp">
+            </div>
+
+            <h1 class="text-xl font-bold text-center h-14 bg-[#c9a5ac]">Patricia</h1>
+            <div class="rounded-b-lg shadow-md text-center bg-[#c9a5ac] inline-block whitespace-normal overflow-auto">Meet Patricia! She is a  7 months old grey tabby cat. Her favorite food is salmon!
+                <p>Share this cat on your socials!</p>
+                <img src="images/socials.webp">
+            </div>
+           
+        </div>
+
+
+        <!--Cat #3-->
+        <div class="">
+            <a href="#lightbox2">
+                <img src="images/cat4.webp" loading="lazy" class = "rounded-t-lg w-full h-32 sm:h-48 object-cover">
+            </a>
+
+            <div id="lightbox2" class="hidden target:block fixed inset-0 p-10 bg-black/75 overflow-auto">
+                <a href="" class="bg-white px-6 py-6 text-black absolute right-0 bottom-0">X</a>
+                <img src="images/cat4.webp">
+            </div>
+
+            <h1 class="text-xl font-bold text-center h-14 bg-[#c9a5ac]">Garfield</h1>
+            <div class="rounded-b-lg shadow-md text-center bg-[#c9a5ac] inline-block whitespace-normal overflow-auto">Meet Garfield! He is a 3 year old orange tabby cat. He does live up to his name because he loves lasagna!
+                <p>Share this cat on your socials!</p>
+                <img src="images/socials.webp">
+            </div>
+        </div>
+
+
+        <!--Cat #4-->
+        <div class="">
+            <a href="#lightbox3">
+                <img src="images/cat5.webp" loading="lazy" class = "rounded-t-lg w-full h-32 sm:h-48 object-cover">
+            </a>
+
+            <div id="lightbox3" class="hidden target:block fixed inset-0 p-10 bg-black/75 overflow-auto">
+                <a href="" class="bg-white px-6 py-6 text-black absolute right-0 bottom-0">X</a>
+                <img src="images/cat5.webp">  
+            </div>  
+
+            <h1 class="text-xl font-bold text-center h-14 bg-[#c9a5ac]">Beanie</h1>
+            <div class="rounded-b-lg shadow-md text-center bg-[#c9a5ac] inline-block whitespace-normal overflow-auto">Meet Beanie! She is a 3 year old calico cat. She has 3 siblings and loves playing with her siblings!
+                <p>Share this cat on your socials!</p>
+                <img src="images/socials.webp">
+            </div>
+        </div>
+
+
+        <!--Cat #5-->
+        <div class="">
+            <a href="#lightbox4">
+                <img src="images/cat6.webp" loading="lazy" class = "rounded-t-lg w-full h-32 sm:h-48 object-cover">
+            </a>
+
+            <div id="lightbox4" class="hidden target:block fixed inset-0 p-10 bg-black/75 overflow-auto">
+                <a href="" class="bg-white px-6 py-6 text-black absolute right-0 bottom-0">X</a>
+                <img src="images/cat6.webp">  
+            </div>
+
+            <h1 class="text-xl font-bold text-center h-14 bg-[#c9a5ac]">Princess</h1>
+            <div class="rounded-b-lg shadow-md text-center bg-[#c9a5ac] inline-block whitespace-normal overflow-auto">Meet Princess! She is a 2 year old orange tabby cat. She loves spending time sunbathing in the sun!
+                <p>Share this cat on your socials!</p>
+                <img src="images/socials.webp">
+            </div>
+        </div>
+
+
+        <!--Cat #6-->
+        <div class="">
+            <a href="#lightbox5">
+                <img src="images/cat7.webp" loading="lazy" class = "rounded-t-lg w-full h-32 sm:h-48 object-cover">
+            </a>
+
+            <div id="lightbox5" class="hidden target:block fixed inset-0 p-10 bg-black/75 overflow-auto">
+                <a href="" class="bg-white px-6 py-6 text-black absolute right-0 bottom-0">X</a>
+                <img src="images/cat7.webp">  
+            </div>
+
+            <h1 class="text-xl font-bold text-center h-14 bg-[#c9a5ac]">Sprinkles</h1>
+            <div class="rounded-b-lg shadow-md text-center bg-[#c9a5ac] inline-block whitespace-normal overflow-auto">Meet Sprinkles! She is a 2 year old orange tabby cat. She loves spending time sunbathing in the sun!
+                <p>Share this cat on your socials!</p>
+                <img src="images/socials.webp">
+            </div>
+        </div>
+
+
+        <!--Cat #7-->
+        <div class="">
+            <a href="#lightbox6">
+                <img src="images/cat8.webp" loading="lazy" class = "rounded-t-lg w-full h-32 sm:h-48 object-cover">
+            </a>
+
+            <div id="lightbox6" class="hidden target:block fixed inset-0 p-10 bg-black/75 overflow-auto">
+                <a href="" class="bg-white px-6 py-6 text-black absolute right-0 bottom-0">X</a>
+                <img src="images/cat8.webp">  
+            </div>
+
+            <h1 class="text-xl font-bold text-center h-14 bg-[#c9a5ac]">Luna</h1>
+            <div class="rounded-b-lg shadow-md text-center bg-[#c9a5ac] inline-block whitespace-normal overflow-auto">Meet Luna! She is a 5 year cat. She loves spending time cuddled up by the fire!
+                <p>Share this cat on your socials!</p>
+                <img src="images/socials.webp">
+            </div>
+        </div>
+
+
+        <!--Cat #8-->
+        <div class="">
+            <a href="#lightbox7">
+                <img src="images/cat9.webp" loading="lazy" class = "rounded-t-lg w-full h-32 sm:h-48 object-cover">
+            </a>
+
+            <div id="lightbox7" class="hidden target:block fixed inset-0 p-10 bg-black/75 overflow-auto">
+                <a href="" class="bg-white px-6 py-6 text-black absolute right-0 bottom-0">X</a>
+                <img src="images/cat9.webp"> 
+            </div>  
+
+            <h1 class="text-xl font-bold text-center h-14 bg-[#c9a5ac]">Daisy</h1>
+            <div class="rounded-b-lg shadow-md text-center bg-[#c9a5ac] inline-block whitespace-normal overflow-auto">Meet Daisy! She is a fiesty 2 month old kitten with lots of energy!
+                <p>Share this cat on your socials!</p>
+                <img src="images/socials.webp">
+            </div>
+        </div>
+
+
+        <!--Cat #9-->
+        <div class="">
+            <a href="#lightbox8">
+                <img src="images/cat10.webp" loading="lazy" class = "rounded-t-lg w-full h-32 sm:h-48 object-cover">
+            </a>
+
+            <div id="lightbox8" class="hidden target:block fixed inset-0 p-10 bg-black/75 overflow-auto">
+                <a href="" class="bg-white px-6 py-6 text-black absolute right-0 bottom-0">X</a>
+                <img src="images/cat10.webp"> 
+            </div>    
+
+            <h1 class="text-xl font-bold text-center h-14 bg-[#c9a5ac]">Oscar</h1>
+            <div class="rounded-b-lg shadow-md text-center bg-[#c9a5ac] inline-block whitespace-normal overflow-auto">Meet Oscar! He is a 1 year old cat with amazing blue and yellow eyes!
+                <p>Share this cat on your socials!</p>
+                <img src="images/socials.webp">
+            </div>
+        </div>
+
+
+        <!--Cat #10-->
+        <div class="">
+            <a href="#lightbox9">
+                <img src="images/cat11.webp" loading="lazy" class = "rounded-t-lg w-full h-32 sm:h-48 object-cover">
+            </a>
+
+            <div id="lightbox9" class="hidden target:block fixed inset-0 p-10 bg-black/75 overflow-auto">
+                <a href="" class="bg-white px-6 py-6 text-black absolute right-0 bottom-0">X</a>
+                <img src="images/cat11.webp"> 
+            </div>
+
+            <h1 class="text-xl font-bold text-center h-14 bg-[#c9a5ac]">Missy</h1>
+            <div class="rounded-b-lg shadow-md text-center bg-[#c9a5ac] inline-block whitespace-normal overflow-auto">Meet Missy! She is a 2 year old cat that loves taking naps!
+                <p>Share this cat on your socials!</p>
+                <img src="images/socials.webp">
+            </div>
+        </div>
+
+
+        <!--Cat #11-->
+        <div class="">
+            <a href="#lightbox10">
+                <img src="images/cat12.webp" loading="lazy" class = "rounded-t-lg w-full h-32 sm:h-48 object-cover">
+            </a>
+
+            <div id="lightbox10" class="hidden target:block fixed inset-0 p-10 bg-black/75 overflow-auto">
+                <a href="" class="bg-white px-6 py-6 text-black absolute right-0 bottom-0">X</a>
+                <img src="images/cat12.webp"> 
+            </div>
+
+            <h1 class="text-xl font-bold text-center h-14 bg-[#c9a5ac]">Izzy</h1>
+            <div class="rounded-b-lg shadow-md text-center bg-[#c9a5ac] inline-block whitespace-normal overflow-auto">Meet Izzy! She is a fiesty 1 year old cat. She loves chasing around birds!
+                <p>Share this cat on your socials!</p>
+                <img src="images/socials.webp">
+            </div>
+        </div>
+
+
+        <!--Cat #12-->
+        <div class="">
+            <a href="#lightbox11">
+                <img src="images/cat13.webp" loading="lazy" class = "rounded-t-lg w-full h-32 sm:h-48 object-cover">
+            </a>
+
+            <div id="lightbox11" class="hidden target:block fixed inset-0 p-10 bg-black/75 overflow-auto">
+                <a href="" class="bg-white px-6 py-6 text-black absolute right-0 bottom-0">X</a>
+                <img src="images/cat13.webp"> 
+            </div> 
+
+            <h1 class="text-xl font-bold text-center h-14 bg-[#c9a5ac]">Milo</h1>
+            <div class="rounded-b-lg shadow-md text-center bg-[#c9a5ac] inline-block whitespace-normal overflow-auto">Meet Milo! He is a fiesty 3 month old orange tabby cat. He loves playing with his other kitty friends!
+                <p>Share this cat on your socials!</p>
+                <img src="images/socials.webp">
+            </div>
+        </div>
+
+
+        <!--Cat #13-->
+        <div class="">
+            <a href="#lightbox12">
+                <img src="images/cat14.webp" loading="lazy" class = "rounded-t-lg w-full h-32 sm:h-48 object-cover">
+            </a>
+
+            <div id="lightbox12" class="hidden target:block fixed inset-0 p-10 bg-black/75 overflow-auto">
+                <a href="" class="bg-white px-6 py-6 text-black absolute right-0 bottom-0">X</a>
+                <img src="images/cat14.webp"> 
+            </div>   
+
+            <h1 class="text-xl font-bold text-center h-14 bg-[#c9a5ac]">Simba</h1>
+            <div class="rounded-b-lg shadow-md text-center bg-[#c9a5ac] inline-block whitespace-normal overflow-auto">Meet Simba! He lives up to his name as he is a fierce orange tabby cat!
+                <p>Share this cat on your socials!</p>
+                <img src="images/socials.webp">
+            </div>
+        </div>
+
+
+        <!--Cat #14-->
+        <div class="">
+            <a href="#lightbox13">
+                <img src="images/cat15.webp" loading="lazy" class = "rounded-t-lg w-full h-32 sm:h-48 object-cover">
+            </a>
+
+            <div id="lightbox13" class="hidden target:block fixed inset-0 p-10 bg-black/75 overflow-auto">
+                <a href="" class="bg-white px-6 py-6 text-black absolute right-0 bottom-0">X</a>
+                <img src="images/cat15.webp"> 
+            </div> 
+
+            <h1 class="text-xl font-bold text-center h-14 bg-[#c9a5ac]">Marbles</h1>
+            <div class="rounded-b-lg shadow-md text-center bg-[#c9a5ac] inline-block whitespace-normal overflow-auto">Meet Marbles! He is a 4 month onl kitten that loves his toy mouse!
+                <p>Share this cat on your socials!</p>
+                <img src="images/socials.webp">
+            </div>
+        </div>
+
+
+        <!--Cat #15-->
+        <div class="">
+            <a href="#lightbox14">
+                <img src="images/cat16.webp" loading="lazy" class = "rounded-t-lg w-full h-32 sm:h-48 object-cover">
+            </a>
+
+            <div id="lightbox14" class="hidden target:block fixed inset-0 p-10 bg-black/75 overflow-auto">
+                <a href="" class="bg-white px-6 py-6 text-black absolute right-0 bottom-0">X</a>
+                <img src="images/cat16.webp"> 
+            </div>   
+
+            <h1 class="text-xl font-bold text-center h-14 bg-[#c9a5ac]">Fanta</h1>
+            <div class="rounded-b-lg shadow-md text-center bg-[#c9a5ac] inline-block whitespace-normal overflow-auto">Meet Fanta! He is a 2 year old cat that loves to sit by the window and see the birds!
+                <img src="images/socials.webp">
+            </div>
+        </div>
+
+    </div>
+
+    <br>
+
+    <div class="rounded-lg bg-[#b48382] text-center">
+        <h1 class="text-3xl font-mono">Take a look at our customers who adpoted from us!</h1>
+    </div>
+
+
+
+    <!--Social Media Feed-->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 rounded-lg">
+
+        <div class=" h-75 p-3">
+            <div class="h-full w-48  border border-gray-300 grid">
+              <div class="h-6 w-full">
+                _susanbaker98
+              </div>
+              <img class="w-full object-contain min-h-0 h-full" src="images/catsocial1.webp">
+              <img class="w-15 h-5" src="images/file1.webp">
+              <p>I love these little cuties. I owe it all to @kittyrescues!</p>
+            </div>
+        </div>
+
+    <div class=" h-75 p-3">
+        <div class="h-full w-48  border border-gray-300 grid">
+          <div class="h-6 w-full">
+            davidjojo2005
+          </div>
+          <img class="w-full object-contain min-h-0 h-full" src="images/catsocial2.webp">
+          <img class="w-15 h-5" src="images/file1.webp">
+          <p>my cute little troublemaker</p>
+        </div>
+    </div>
+
+    <div class=" h-75 p-3">
+        <div class="h-full w-48  border border-gray-300 grid">
+          <div class="h-6 w-full">
+            111angela
+          </div>
+          <img class="w-full object-contain min-h-0 h-full" src="images/catsocial3.webp">
+          <img class="w-15 h-5" src="images/file1.webp">
+          <p>took my cuties out on the backyard today! </p>
+        </div>
+    </div>
+
+    <div class=" h-75 p-3">
+        <div class="h-full w-48  border border-gray-300 grid">
+          <div class="h-6 w-full">
+            songi33
+          </div>
+          <img class="w-full object-contain min-h-0 h-full" src="images/catsocial4.webp">
+          <img class="w-15 h-5" src="images/file1.webp">
+          <p>I bought my cutie a new bed today...safe to say he loves it!</p>
+        </div>
+    </div>
+
+    <div class=" h-75 p-3">
+        <div class="h-full w-48  border border-gray-300 grid">
+          <div class="h-6 w-full">
+            taeo99
+          </div>
+          <img class="w-full object-contain min-h-0 h-full" src="images/catsocial5.webp">
+          <img class="w-15 h-5" src="images/file1.webp">
+          <p>took out the camera today and captured this beauty!</p>
+        </div>
+    </div>
+
+    <div class=" h-75 p-3">
+        <div class="h-full w-48  border border-gray-300 grid">
+          <div class="h-6 w-full">
+            catlover51
+          </div>
+          <img class="w-full object-contain min-h-0 h-full" src="images/catsocial6.webp">
+          <img class="w-15 h-5" src="images/file1.webp">
+          <p>caught her sleeping like this and I just HAD to take a pic!</p>
+        </div>
+    </div>
+
+</div>
+    
+          
+    
+<script src="./script.js"></script>
+
+    
+
+</body>
+</html>
